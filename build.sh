@@ -34,7 +34,7 @@ echo "	5. BPI_M3_USB_1080P"
 echo "	6. BPI_M3_USB_LCD7"
 echo "------------------------------------------"
 
-read -p "Please choose a target(1-6): " board
+if [ -z $1 ]; then read -p "Please choose a target(1-6): " board; else board=$1; fi
 echo
 
 if [ -z "$board" ]; then

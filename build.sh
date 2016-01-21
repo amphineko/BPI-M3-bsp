@@ -71,7 +71,7 @@ echo "	   kernel and rootfs build out"
 echo "	7. Clean all build."
 echo "--------------------------------------------------------------------------------"
 
-read -p "Please choose a mode(1-6): " mode
+if [ -z $2 ]; then read -p "Please choose a mode(1-6): " mode; else mode=$2; fi
 echo
 
 if [ -z "$mode" ]; then
